@@ -1,0 +1,27 @@
+{
+  "name": "book-a-doctor",
+  "version": "1.0.0",
+  "description": "**Book a Doctor** is a full-stack doctor appointment booking platform that makes it easy for patients to discover doctors, check their availability, and book appointments online. The project provides a convenient interface for managing doctor profiles, appointments, and patient information, with secure authentication and a responsive user experience.",
+  "homepage": "https://github.com/sagarshelake14/Book-A-Doctor#readme",
+  "bugs": {
+    "url": "https://github.com/sagarshelake14/Book-A-Doctor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarshelake14/Book-A-Doctor.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.2",
+    "nodemon": "^3.1.14"
+  }
+}
