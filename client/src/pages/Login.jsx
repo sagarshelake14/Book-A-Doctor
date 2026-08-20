@@ -3,8 +3,12 @@ import React from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import {useSelector, useDispatch} from 'react-redux'
 
 function Login() {
+  const {loading} = useSelector(state => state.alerts);
+  console.log(loading);
+  
   const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
