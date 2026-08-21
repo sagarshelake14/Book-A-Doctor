@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import '../layout.css'
 import {Link, useLocation} from "react-router-dom"
-function Layout({children}) {
+import { useSelector } from 'react-redux';
 
+function Layout({children}) {
+   const {user} = useSelector((state) => state.user);
    const location = useLocation();
    const [collapsed, setCollapsed] = useState(false);
 
@@ -57,12 +59,18 @@ function Layout({children}) {
 
         <div className='content'>
           <div className="header">
-            {collapsed ? (
+            {
+            collapsed ? (
               <i className='ri-menu-2-fill header-action-icons' onClick={() => setCollapsed(false)} ></i>)
             :
             (
             <i className='ri-close-fill header-action-icons' onClick={() => setCollapsed(true)} ></i>)}
             
+              <div className='d-flex align-items-center px-4'>
+                <i className='ri-notification-line header-action-icons mr-2 px-2'></i>
+                <Link className='anchor' to="/profile">{user?.name}</Link>
+              </div>
+
           </div>
 
           <div className="body">
