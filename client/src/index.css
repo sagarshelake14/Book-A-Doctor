@@ -75,6 +75,11 @@ label {
          text-decoration: underline !important;
 }
 
+.remix-icons{
+  font-size: 18px;
+  
+}
+
 /* authentication page */
 
 .authentication{
