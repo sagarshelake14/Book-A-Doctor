@@ -52,6 +52,12 @@ label {
          font-size: 1rem;
 }
 
+.page-title{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.734);
+  font-weight: bold;
+}
+
 .card {
          box-shadow: 0 0 2px gray ;
          border-radius: 0 !important;
