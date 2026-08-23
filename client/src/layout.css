@@ -41,7 +41,7 @@
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
-    height: 82vh;
+    height: 93vh;
     width: 100%;
     padding: 15px;
 }
@@ -81,6 +81,12 @@
     color: black;
     cursor: pointer;
     padding-left: 10px;
+}
+
+.ant-badge-count{
+    padding-left: -10px !important;
+    padding-bottom: -10px !important;
+
 }
 
 @media screen and (max-width: 768px){
