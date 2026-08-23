@@ -33,7 +33,7 @@ function ProtectedRoute(props) {
         }
   }
   useEffect(() => {
-      if(!user){
+      if(!user ){
         getUser();
       }
   }, [user]);
