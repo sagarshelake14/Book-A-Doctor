@@ -19,14 +19,14 @@ const userSchema = new mongoose.Schema(
       default: false,
     },
     isAdmin: {
-        type: Boolean,
-        default: false,
+      type: Boolean,
+      default: false,
     },
-    seenNotification: {
+    seenNotifications: {
       type: Array,
       default: [],
     },
-    unseenNotification: {
+    unseenNotifications: {
       type: Array,
       default: [],
     },
