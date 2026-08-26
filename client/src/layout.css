@@ -5,11 +5,12 @@
 .logo{
     color: white;
     font-weight: bold;
+    font-size: 25px;
 }
 .role{
     color: white;
     font-size: 14px;
-    margin-top:-20px ;
+    margin-top:-5px ;
 }
 .sidebar{
     background-color: #005555;
