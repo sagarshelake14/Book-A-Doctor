@@ -400,18 +400,28 @@ router.post("/check-booking-avilability", authMiddleware, async (req, res) => {
 
 router.get("/get-appointments-by-user-id", authMiddleware, async (req, res) => {
   try {
-    const appointments = await Appointment.find({ userId: req.body.userId });
-    res.status(200).send({
+    const userId = req.user?.id || req.userId || req.body?.userId;
+
+    if (!userId) {
+      return res.status(401).send({
+        message: "User ID not found in token",
+        success: false,
+      });
+    }
+
+    const appointments = await Appointment.find({ userId: userId });
+
+    return res.status(200).send({
       message: "Appointments fetched successfully",
       success: true,
       data: appointments,
     });
   } catch (error) {
-    console.log(error);
-    res.status(500).send({
+    console.error("GET USER APPOINTMENTS ERROR:", error);
+    return res.status(500).send({
       message: "Error fetching appointments",
       success: false,
-      error,
+      error: error.message,
     });
   }
 });
